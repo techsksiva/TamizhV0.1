@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleanPro Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+ 
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #333;
+    }
+
+   .top-bar {
+  font-size: 0.9rem;
+}
+
+.social-icons a {
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
+
+    /* Hero Section */
+    .hero {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #d1ecf1;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* Service & Trending Cards */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+    }
+
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    /* Contact & Footer */
+    .contact {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: #004c99;
+      color: white;
+      padding: 1rem;
+    }
+
+    .btn {
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.contactinfo a{
+  color: #fff;
+}
+
+.topbar{
+  background-color: #004c99;
+}
+
+    /* Animations */
+@keyframes fadeInUp {
+  from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Fixes */
+    @media (max-width: 768px) {
+      .hero, .contact {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Top Contact Bar -->
+<div class="topbar py-1 border-bottom d-none d-md-block">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="contactinfo">
+      <a href="#"><i class="bi bi-telephone-fill me-3 text-decoration-none"> +123 456 7890</i></a>
+     
+    </div>
+    <div class="social-icons me-3">
+      <a href="#" class="text-dark text-decoration-none me-3"><img src="/assets/mail.png" alt="CleanPro Logo" height="15" class="me-2">tamizharasan.2949@gmail.com</a>
+      <a href="#" class="text-dark me-2"> <img src="/assets/fb.png" alt="CleanPro Logo" height="20" class="me-2"></a>
+      <a href="#" class="text-dark me-3"> <img src="assets/insta.png" alt="CleanPro Logo" height="20" class="me-2"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/Tamizh-Logo.png" alt="CleanPro Logo" height="100" class="me-2">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trending">Trending</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+  <!-- Carousel Section (Home) -->
+<!-- <section id="home" class="mb-4">
+  <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    
+      <div class="carousel-item active">
+        <img src="./slide.jpg" class="d-block w-100" alt="CleanPro Slide 1">
+       
+      </div>
+     
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section> -->
+
+ <div class="container my-4">
+    <div class="row">
+      <div class="col-md-6 pt-4">
+        <div class="">
+          <h1>Cleaning, Sanitizing, and Septic Solutions — All in One Place</h1>
+          <p class="pt-4">At Tamizh Clean System ,We understand that a clean, safe, and functional space is essential — whether it’s your home, office, or a large commercial facility. That’s why we offer a full suite of services under one roof, including deep cleaning, sanitization, flood-time restoration, and professional septic tank maintenance.</p>
+          <p class="pt-4">Our expert team is trained to deliver top-tier service using modern equipment and eco-friendly products that are tough on grime but gentle on the environment. We respond quickly to emergency needs and ensure every corner is cleaned to the highest standard.</p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 pt-4">
+          <a href="tel:+919876543210" class="btn btn-primary d-flex align-items-center gap-2 px-4 py-2 rounded-pill shadow">
+            <i class="bi bi-telephone-fill"></i> Call Us: +91 98765 43210
+          </a>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 pt-4">
+          <a href="#contact" class="btn btn-success d-flex align-items-center gap-2 px-4 py-2 rounded-pill shadow">
+            <i class="bi bi-calendar-check-fill"></i> Book Now
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="">
+          <img src="/assets/home.png" class="d-block w-100" alt="CleanPro Slide 1">
+        </div>
+      </div>
+    </div>
+ </div>
+
+
+ 
+
+  <div class="container mb-4 p-0">
+    <div class="row">
+      <h3 class="mt-5 mb-4 fw-bold text-center">Why Choose Tamizh Clean System?</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-box-seam-fill text-primary fs-3 me-3"></i>
+            <div>All-in-One Service Provider</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-people-fill text-success fs-3 me-3"></i>
+            <div>Expert Team with Years of Experience</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-leaf-fill text-success fs-3 me-3"></i>
+            <div>Eco-Friendly Products</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-lightning-fill text-warning fs-3 me-3"></i>
+            <div>Fast Response Time</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-currency-rupee text-info fs-3 me-3"></i>
+            <div>Affordable Pricing</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-clock-history text-danger fs-3 me-3"></i>
+            <div>24/7 Availability</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-calendar-check-fill text-primary fs-3 me-3"></i>
+            <div>Flexible Scheduling</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+            <i class="bi bi-emoji-smile-fill text-success fs-3 me-3"></i>
+            <div>Customer Satisfaction Guaranteed</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   <div class="container-fluid my-4">
+    <div class="row">
+      <main class="col-lg-12 col-md-12 pt-4">
+        <section id="home" class="hero">
+          <h2>Professional Cleaning & Septic Services</h2>
+          <p>Fast, reliable, and affordable services for your home or office.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+        <!-- Services -->
+        <section id="services" class="mb-5">
+          <h2 class="mb-4 pt-4">Our Services</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+            <div class="card h-200">
+              <img src="assets/Home&office.jpeg" class="card-img-top" alt="Home & Office Cleaning">
+              <div class="card-body">
+                <h5 class="card-title">Home & Office Cleaning</h5>
+                <p class="card-text">Detailed cleaning for homes, offices, and commercial spaces.</p>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-md-4">
+              <div class="card h-250">
+                <img src="assets/gray-pipe.jpg" class="card-img-top" alt="Home & Office Cleaning">
+                <div class="card-body">
+                  <h5 class="card-title">Flood-Time Cleaning</h5>
+                  <p class="card-text">Emergency cleaning services during <br/>flood situations.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                 <img src="/assets/truck.jpeg" class="card-img-top" alt="Home & Office Cleaning">
+                <div class="card-body">
+                  <h5 class="card-title">Septic Tank Services</h5>
+                  <p class="card-text">Efficient and hygienic septic tank cleaning and maintenance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  </div>  
+
+  <div class="container">
+    <div class="row">
+        <section id="trending" class="mb-5">
+          <h2 class="mb-4 pt-4">Trending Attractions</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Rain+Relief" class="card-img-top" alt="Rain Relief">
+                <div class="card-body">
+                  <h5 class="card-title">Rain Relief Cleanup</h5>
+                  <p class="card-text">Our trending flood cleanup service is in high demand this season.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Eco+Clean" class="card-img-top" alt="Eco Clean">
+                <div class="card-body">
+                  <h5 class="card-title">Eco-Friendly Deep Cleaning</h5>
+                  <p class="card-text">A green choice that’s both powerful and safe for families.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Septic+Now" class="card-img-top" alt="Septic Maintenance">
+                <div class="card-body">
+                  <h5 class="card-title">Instant Septic Maintenance</h5>
+                  <p class="card-text">Trending for quick booking and same-day service delivery.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+  </div>
+
+        
+  <section id="contact" class="contact">
+          <h2>Contact Us</h2>
+          <p><strong>Email:</strong> info@cleanproservices.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+  </section>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p class="mb-0">&copy; 2025 CleanPro Services. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
